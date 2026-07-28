@@ -1,56 +1,44 @@
-# 🚀 LangGraph Tutorials
+# 🚀 LangGraph Learning Repository
 
-Learn LangGraph from scratch with hands-on Jupyter notebooks.
+<div align="center">
 
-This repository contains beginner-friendly examples demonstrating how to build AI workflows using **LangGraph**, **LangChain**, and **Groq LLMs**.
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![LangGraph](https://img.shields.io/badge/LangGraph-Latest-green?style=for-the-badge)
+![LangChain](https://img.shields.io/badge/LangChain-Framework-purple?style=for-the-badge)
+![Groq](https://img.shields.io/badge/Groq-LLM-orange?style=for-the-badge)
 
----
+Learn **LangGraph** from scratch through practical Jupyter notebooks, covering graph-based AI workflows, chatbot development, state management, and LangChain integration.
 
-# 📚 Contents
-
-## 1. LangGraph Quickstart
-
-Learn the fundamentals of LangGraph.
-
-Topics Covered
-
-- StateGraph
-- Nodes
-- Edges
-- Entry Point
-- END Node
-- Compile Graph
-- Invoke Graph
-- Graph Visualization
-
-Notebook
-
-```
-notebooks/langgraph-quickstart.ipynb
-```
+</div>
 
 ---
 
-## 2. LangGraph Chatbot
+# 📚 Repository Contents
 
-Build an AI chatbot using LangGraph.
+This repository contains two beginner-friendly notebooks:
 
-Topics Covered
+| Notebook | Description |
+|----------|-------------|
+| **langgraph-quickstart.ipynb** | Introduction to LangGraph, StateGraph, Nodes, Edges, and Graph Execution |
+| **langgraph.ipynb** | Building an AI Chatbot using LangGraph, LangChain, and Groq LLM |
 
-- ChatGroq
-- Llama 3.3 70B
-- LangGraph State
-- add_messages
-- START Node
-- END Node
-- StateGraph
-- AI Message Flow
-- Graph Execution
+---
 
-Notebook
+# 📂 Project Structure
 
-```
-notebooks/langgraph.ipynb
+```text
+LangGraph-Learning/
+│
+├── notebooks/
+│   ├── langgraph.ipynb
+│   └── langgraph-quickstart.ipynb
+│
+├── images/
+│   └── graph.png
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -66,18 +54,85 @@ notebooks/langgraph.ipynb
 
 ---
 
+# ✨ Topics Covered
+
+## LangGraph Fundamentals
+
+- StateGraph
+- Nodes
+- Edges
+- START Node
+- END Node
+- Graph Compilation
+- Graph Execution
+- State Management
+
+---
+
+## LangGraph Chatbot
+
+- ChatGroq Integration
+- Llama 3 Models
+- Message State
+- AI Chat Workflow
+- Graph Invocation
+- Conversation Flow
+- Response Generation
+
+---
+
+# 🧠 Workflow
+
+```text
+             User Input
+                  │
+                  ▼
+          StateGraph Starts
+                  │
+                  ▼
+            AI Chat Node
+                  │
+                  ▼
+         LLM (Groq / Llama)
+                  │
+                  ▼
+        Generate AI Response
+                  │
+                  ▼
+             Update State
+                  │
+                  ▼
+                 END
+```
+
+---
+
+# 📊 Graph Architecture
+
+Add your generated graph visualization here.
+
+<div align="center">
+
+![LangGraph Workflow](images/graph.png)
+
+</div>
+
+---
+
+
+
 # 📦 Installation
 
 Clone the repository
 
 ```bash
-git clone https://github.com/manasranjanmeher99/LangGraph-Tutorials.git
+git clone https://github.com/manasranjanmeher99/LangGraph-Learning.git
 ```
 
 Move into the project
 
 ```bash
-cd LangGraph-Tutorials
+cd LangGraph-Learning
 ```
 
 Install dependencies
@@ -88,75 +143,104 @@ pip install -r requirements.txt
 
 ---
 
-# 🔑 Configure API Keys
+# 📄 Requirements
 
-Inside the notebook set:
-
-```python
-groq_api_key="YOUR_GROQ_API_KEY"
-langsmith=""
 ```
-
-Or use environment variables.
+langgraph
+langchain
+langchain-core
+langchain-groq
+groq
+typing_extensions
+jupyter
+ipython
+```
 
 ---
 
-# ▶ Run
+# 🔑 Configure API Key
+
+```python
+from langchain_groq import ChatGroq
+
+llm = ChatGroq(
+    model="llama-3.3-70b-versatile",
+    api_key="YOUR_GROQ_API_KEY"
+)
+```
+
+> **Note:** Replace `YOUR_GROQ_API_KEY` with your own Groq API key.
+
+---
+
+# ▶️ Run the Notebooks
+
+Launch Jupyter Notebook:
 
 ```bash
 jupyter notebook
 ```
 
-Open either notebook and execute the cells sequentially.
+Then open:
+
+- `langgraph-quickstart.ipynb`
+- `langgraph.ipynb`
+
+Run all cells sequentially.
 
 ---
 
-# 📸 Preview
+# 🎯 Learning Outcomes
 
-Suggested screenshots:
+After completing these notebooks, you will understand:
 
-- Graph Workflow
-- StateGraph Visualization
-- Chatbot Output
-- Notebook Execution
-
----
-
-# 📖 Learning Outcomes
-
-After completing these notebooks you'll understand:
-
-✅ LangGraph Basics
-
-✅ StateGraph
-
-✅ Nodes
-
-✅ Edges
-
-✅ START and END Nodes
-
-✅ State Management
-
-✅ Message Passing
-
-✅ Building AI Workflows
-
-✅ Chatbot Development
+- ✅ LangGraph Basics
+- ✅ StateGraph
+- ✅ Graph Nodes
+- ✅ Graph Edges
+- ✅ START & END Nodes
+- ✅ AI Workflow Design
+- ✅ State Management
+- ✅ LangChain Integration
+- ✅ Groq LLM Integration
+- ✅ Building AI Chatbots
+- ✅ Graph Compilation & Execution
 
 ---
 
-# Future Additions
+# 🚀 Future Improvements
 
-- Multi-Agent Systems
-- Memory
+- Memory Support
 - Tool Calling
-- Human in the Loop
+- Human-in-the-Loop
+- Multi-Agent Systems
 - RAG with LangGraph
-- AI Agents
 - Conditional Edges
 - Parallel Execution
+- Agent Supervisor
+- Streaming Responses
 
 ---
 
-# ⭐ If this repository helped you, consider giving it a Star.
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Open a Pull Request.
+
+---
+
+# ⭐ Support
+
+If you found this repository helpful, please consider giving it a ⭐ on GitHub.
+
+---
+
+<div align="center">
+
+### Happy Learning with LangGraph! 🚀
+
+</div>
