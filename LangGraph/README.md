@@ -109,7 +109,6 @@ LangGraph-Learning/
 
 # 📊 Graph Architecture
 
-Add your generated graph visualization here.
 
 <div align="center">
 
